@@ -1,8 +1,22 @@
 <h2 class="northwest-header-main">Northwestern Mutual Assignment</h2><br>
 <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
+  <div class="container">
+    <div class="row">
+      <div id="custom-search-input">
+          <div class="input-group col-md-12">
+            <input type="text" class="  search-query form-control" placeholder="Search" />
+                <span class="input-group-btn">
+                  <button class="btn btn-danger" type="button">
+                      <span class=" glyphicon glyphicon-search"></span>
+                  </button>
+                </span>
+          </div>
+      </div>
+    </div>
+  </div><br>
   <table class="table stats caps table-striped">
     <thead>
-      <tr style="text-align: left;">
+      <tr style="text-align: left; background-color:antiquewhite;">
           <td>Name</td>
           <td>Email</td>
           <td>Company Name</td>
@@ -10,7 +24,7 @@
       </tr>
     </thead>
       <tbody>
-          <tr class="northwest-table" *ngFor="let user of users"><!--Adjust bg and font colors inline-->
+          <tr class="northwest-table" *ngFor="let user of users">
               <td>{{user.name}}</td>
               <td>{{user.email}}</td>
               <td>{{user.company.name}}</td>
