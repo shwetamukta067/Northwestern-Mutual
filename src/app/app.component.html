@@ -1,61 +1,43 @@
-<!--s<section class="our-webcoderskull padding-lg">
-  <div class="container">
-    <div class="row heading heading-icon">
-        <h2>Our Team</h2>
-    </div>
-    <ul class="row">
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="http://www.webcoderskull.com/img/team4.png" class="img-responsive" alt=""></figure>
-            <h3><a href="http://www.webcoderskull.com/">Web coder skull</a></h3>
-            <p>Freelance Web Developer</p>
-            <ul class="follow-us clearfix">
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-      </li>
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="http://www.webcoderskull.com/img/team1.png" class="img-responsive" alt=""></figure>
-            <h3><a href="#">Kappua </a></h3>
-            <p>Freelance Web Developer</p>
-            <ul class="follow-us clearfix">
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-      </li>
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="http://www.webcoderskull.com/img/team4.png" class="img-responsive" alt=""></figure>
-            <h3><a href="http://www.webcoderskull.com/">Manish </a></h3>
-            <p>Freelance Web Developer</p>
-            <ul class="follow-us clearfix">
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-       </li>
-      <li class="col-12 col-md-6 col-lg-3">
-          <div class="cnt-block equal-hight" style="height: 349px;">
-            <figure><img src="http://www.webcoderskull.com/img/team2.png" class="img-responsive" alt=""></figure>
-            <h3><a href="http://www.webcoderskull.com/">Atul </a></h3>
-            <p>Freelance Web Developer</p>
-            <ul class="follow-us clearfix">
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-      </li>
-    </ul>
-  </div>
-</section>-->
-<h2>User Data</h2>
-<ul *ngFor="let user of users">
-  <li>{{user.name}}</li>
-</ul>
+<h2 class="northwest-header-main">Northwestern Mutual Assignment</h2><br>
+<div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
+  <table class="table stats caps">
+    <thead>
+      <tr style="text-align: left;">
+          <td>Name</td>
+          <td>Email</td>
+          <td>Company Name</td>
+          <td>Website</td>
+      </tr>
+    </thead>
+      <tbody>
+          <tr style="background:#e73a3f;color:#e6f0f9; border-radius:6px;">
+              <td>Batman</td>
+              <td>Bruce Wayne</td>
+              <td>Robin</td>
+              <td>Batmobile</td>
+          </tr>
+          <!--Spacer-->
+          <tr class="spacing">
+              <td colspan="4"></td><!--Colspan should match width of your table-->
+          </tr>
+          <!--End Spacer-->
+          <tr style="background: #d8e2ea;  border-radius:6px; color: #697880;"><!--Adjust bg and font colors inline-->
+              <td>Spiderman</td>
+              <td>Peter Parker</td>
+              <td>N/A</td>
+              <td>Web-Slinging</td>
+          </tr>
+          <!--Spacer-->
+          <tr class="spacing">
+              <td colspan="4"></td><!--Colspan should match width of your table-->
+          </tr>
+          <!--End Spacer-->
+          <tr style="background: #d8e2ea;  border-radius:6px; color: #697880;"><!--Adjust bg and font colors inline-->
+              <td>Wonder Woman</td>
+              <td>Diana Prince</td>
+              <td>N/A</td>
+              <td>Invisible Jet</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

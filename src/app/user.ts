@@ -1,3 +1,4 @@
+import { Component } from '@angular/core';
 export interface IUsers {
     id: number;
     name: string;
@@ -5,4 +6,7 @@ export interface IUsers {
     username: string;
     email: string;
     address:any;
+    phone:number;
+    website:string;
+    company:any;
 }
