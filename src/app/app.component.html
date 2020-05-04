@@ -1,6 +1,6 @@
 <h2 class="northwest-header-main">Northwestern Mutual Assignment</h2><br>
 <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
-  <table class="table stats caps">
+  <table class="table stats caps table-striped">
     <thead>
       <tr style="text-align: left;">
           <td>Name</td>
@@ -10,34 +10,12 @@
       </tr>
     </thead>
       <tbody>
-          <tr style="background:#e73a3f;color:#e6f0f9; border-radius:6px;">
-              <td>Batman</td>
-              <td>Bruce Wayne</td>
-              <td>Robin</td>
-              <td>Batmobile</td>
-          </tr>
-          <!--Spacer-->
-          <tr class="spacing">
-              <td colspan="4"></td><!--Colspan should match width of your table-->
-          </tr>
-          <!--End Spacer-->
-          <tr style="background: #d8e2ea;  border-radius:6px; color: #697880;"><!--Adjust bg and font colors inline-->
-              <td>Spiderman</td>
-              <td>Peter Parker</td>
-              <td>N/A</td>
-              <td>Web-Slinging</td>
-          </tr>
-          <!--Spacer-->
-          <tr class="spacing">
-              <td colspan="4"></td><!--Colspan should match width of your table-->
-          </tr>
-          <!--End Spacer-->
-          <tr style="background: #d8e2ea;  border-radius:6px; color: #697880;"><!--Adjust bg and font colors inline-->
-              <td>Wonder Woman</td>
-              <td>Diana Prince</td>
-              <td>N/A</td>
-              <td>Invisible Jet</td>
-          </tr>
+          <tr class="northwest-table" *ngFor="let user of users"><!--Adjust bg and font colors inline-->
+              <td>{{user.name}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.company.name}}</td>
+              <td>{{user.website}}</td><br>
+          </tr> 
       </tbody>
   </table>
 </div>

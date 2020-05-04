@@ -6,6 +6,12 @@
     antiquewhite;
     padding: 10px; 
 }
+.northwest-table {
+    background: #d8e2ea;  
+    border-radius:6px; 
+    color: #697880;
+    font-size: medium;
+}
 
 table {
     margin:10px 0px; 
@@ -31,9 +37,7 @@ thead {
     thead{
         display: none;
     }
-    tr:nth-of-type(odd) {
-        background: #eee;
-    }
+
     td, tr {
         display: block;
     }
