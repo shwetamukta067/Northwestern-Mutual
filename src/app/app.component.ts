@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './../service/users.service';
+import { IUsers } from './user';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,18 @@ import { UserService } from './../service/users.service';
 })
 export class AppComponent implements OnInit {
 
-  public users:any =[];
+  users: IUsers[] = [];
+  name: string;
   title = 'northwestern-mutual';
-  constructor(private userService:UserService) {}
+  searchTerm: string;
+  constructor(private userService:UserService) { }
+
+  search(){
+    this.users = this.users.filter(res =>{
+      return res.name.toLowerCase().match(this.name.toLowerCase());
+    });
+  }
+
   ngOnInit() {
      this.userService.getUsers().subscribe(data => this.users = data);
   }
