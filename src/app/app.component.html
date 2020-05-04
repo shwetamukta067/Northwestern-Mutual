@@ -4,9 +4,9 @@
     <div class="row">
       <div id="custom-search-input">
           <div class="input-group col-md-12">
-            <input type="text" class="search-query form-control" placeholder="search" [(ngModel)]="name" (input)="search()" />{{name}}
+            <input type="text" class="search-query form-control" placeholder="search" [(ngModel)]="searchTerm" />
                 <span class="input-group-btn">
-                  <button class="btn btn-danger" type="button">
+                  <button class="btn btn-danger" type="button" (click)="search()">
                       <span class=" glyphicon glyphicon-search"></span>
                   </button>
                 </span>
@@ -24,7 +24,7 @@
       </tr>
     </thead>
       <tbody>
-          <tr class="northwest-table" *ngFor="let user of users">
+          <tr class="northwest-table" *ngFor="let user of users | userFilter:searchTerm">
               <td>{{user.name}}</td>
               <td>{{user.email}}</td>
               <td>{{user.company.name}}</td>

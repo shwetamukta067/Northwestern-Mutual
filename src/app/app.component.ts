@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
   search(){
     this.users = this.users.filter(res =>{
-      return res.name.toLowerCase().match(this.name.toLowerCase());
+    return res.name.toLowerCase().match(this.name.toLowerCase());
     });
   }
 
