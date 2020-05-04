@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   name: string;
   title = 'northwestern-mutual';
   searchTerm: string;
+  results:any;
   constructor(private userService:UserService) { }
 
   search(){
@@ -22,7 +23,12 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-     this.userService.getUsers().subscribe(data => this.users = data);
-  }
-  
+    this.userService.getUsers().subscribe(data => this.users = data);
+   /* this.userService.getUsers().subscribe((data) => {
+      this.results = data;
+      console.log("Result", data);
+  }, error => {
+     //this.errorMessage = error;
+  });*/
+ }
 }
