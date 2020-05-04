@@ -12,6 +12,10 @@
     color: #697880;
     font-size: medium;
 }
+.northwest-table-top {
+    text-align: left; 
+    background-color:antiquewhite;
+}
 
 table {
     margin:10px 0px; 
