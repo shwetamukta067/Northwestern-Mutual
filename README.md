@@ -8,7 +8,7 @@ git clone https://github.com/shwetamukta067/Northwestern-Mutual.git
 
 cd  Northwestern-Mutual/
 
-git checkout git checkout Asssignment
+git checkout Asssignment
 
 npm install
 
