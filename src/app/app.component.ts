@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
       this.users = data;
       //console.log("Result Before", this.users);
       this.users = this.users.sort(this.compare);
-      //console.log("Result After",this.abc);
+      //console.log("Result After",this.users);
     }, error => {
      //this.errorMessage = error;
   });
