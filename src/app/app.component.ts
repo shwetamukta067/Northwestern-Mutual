@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   name: string;
   title = 'northwestern-mutual';
   searchTerm: string;
-  results:any;
+
   constructor(private userService:UserService) { }
 
   search(){
@@ -21,14 +21,27 @@ export class AppComponent implements OnInit {
     return res.name.toLowerCase().match(this.name.toLowerCase());
     });
   }
+   compare(a,b) {
+    const nameA = a.name;
+    const nameB = b.name;
+
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
 
   ngOnInit() {
-    this.userService.getUsers().subscribe(data => this.users = data);
-   /* this.userService.getUsers().subscribe((data) => {
-      this.results = data;
-      console.log("Result", data);
-  }, error => {
+      this.userService.getUsers().subscribe((data) => {
+      this.users = data;
+      //console.log("Result Before", this.users);
+      this.users = this.users.sort(this.compare);
+      //console.log("Result After",this.abc);
+    }, error => {
      //this.errorMessage = error;
-  });*/
+  });
  }
 }
