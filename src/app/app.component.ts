@@ -9,10 +9,10 @@ import { IUsers } from './user';
 })
 export class AppComponent implements OnInit {
 
-  users: IUsers[] = [];
-  name: string;
-  title = 'northwestern-mutual';
-  searchTerm: string;
+  public users: IUsers[] = [];
+  public name: string;
+  public title: string = 'northwestern-mutual';
+  public searchTerm: string;
 
   constructor(private userService:UserService) { }
 
@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
     this.users = this.users.filter(res =>{
     return res.name.toLowerCase().match(this.name.toLowerCase());
     });
-  }
-   compare(a,b) {
+ }
+  compare(a:any,b:any) {
     const nameA = a.name;
     const nameB = b.name;
 
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
       comparison = -1;
     }
     return comparison;
-  }
+}
 
   ngOnInit() {
       this.userService.getUsers().subscribe((data) => {
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
       this.users = this.users.sort(this.compare);
       //console.log("Result After",this.users);
     }, error => {
-     //this.errorMessage = error;
+      //Error code gets handled here.
   });
  }
 }
